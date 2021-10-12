@@ -6,14 +6,44 @@
 
 > An ESLint plugin that provides a set of rules for Ember applications based on commonly known good practices.
 
-## ❗️Requirements
+<!-- vscode-markdown-toc -->
+* [❗️Requirements](#Requirements)
+* [🚀 Usage](#Usage)
+	* [1. Install plugin](#Installplugin)
+	* [2. Modify your `.eslintrc.js`](#Modifyyour.eslintrc.js)
+* [🧰 Configurations](#Configurations)
+* [🍟 Rules](#Rules)
+	* [Components](#Components)
+	* [Computed Properties](#ComputedProperties)
+	* [Controllers](#Controllers)
+	* [Deprecations](#Deprecations)
+	* [Ember Data](#EmberData)
+	* [Ember Object](#EmberObject)
+	* [Ember Octane](#EmberOctane)
+	* [jQuery](#jQuery)
+	* [Miscellaneous](#Miscellaneous)
+	* [Routes](#Routes)
+	* [Services](#Services)
+	* [Stylistic Issues](#StylisticIssues)
+	* [Testing](#Testing)
+* [🍻 Contribution Guide](#ContributionGuide)
+	* [Creating a New Rule](#CreatingaNewRule)
+* [🔓 License](#License)
+
+<!-- vscode-markdown-toc-config
+	numbering=false
+	autoSave=true
+	/vscode-markdown-toc-config -->
+<!-- /vscode-markdown-toc -->
+
+## <a name='Requirements'></a>❗️Requirements
 
 - [ESLint](https://eslint.org/) `>= 6`
 - [Node.js](https://nodejs.org/) `10.* || 12.* || >= 14`
 
-## 🚀 Usage
+## <a name='Usage'></a>🚀 Usage
 
-### 1. Install plugin
+### <a name='Installplugin'></a>1. Install plugin
 
 ```shell
 yarn add --dev eslint-plugin-ember
@@ -25,7 +55,7 @@ Or
 npm install --save-dev eslint-plugin-ember
 ```
 
-### 2. Modify your `.eslintrc.js`
+### <a name='Modifyyour.eslintrc.js'></a>2. Modify your `.eslintrc.js`
 
 ```js
 // .eslintrc.js
@@ -42,14 +72,14 @@ module.exports = {
 };
 ```
 
-## 🧰 Configurations
+## <a name='Configurations'></a>🧰 Configurations
 
 |    | Name | Description |
 |:---|:-----|:------------|
 | | [base](./lib/config/base.js) | contains no rules settings, but the basic eslint configuration suitable for any ember project. You can use it to configure rules as you wish. |
 | ✅ | [recommended](./lib/recommended-rules.js) | extends the `base` configuration by enabling the recommended rules. |
 
-## 🍟 Rules
+## <a name='Rules'></a>🍟 Rules
 
 Rules are grouped by category to help you understand their purpose. Each rule has emojis denoting:
 
@@ -59,7 +89,7 @@ Rules are grouped by category to help you understand their purpose. Each rule ha
 
 <!--RULES_TABLE_START-->
 
-### Components
+### <a name='Components'></a>Components
 
 | Name    | Description | ✅ | 🔧 | 💡 |
 |:--------|:------------|:---------------|:-----------|:---------------|
@@ -70,7 +100,7 @@ Rules are grouped by category to help you understand their purpose. Each rule ha
 | [no-on-calls-in-components](./docs/rules/no-on-calls-in-components.md) | disallow usage of `on` to call lifecycle hooks in components | ✅ |  |  |
 | [require-tagless-components](./docs/rules/require-tagless-components.md) | disallow using the wrapper element of a component | ✅ |  |  |
 
-### Computed Properties
+### <a name='ComputedProperties'></a>Computed Properties
 
 | Name    | Description | ✅ | 🔧 | 💡 |
 |:--------|:------------|:---------------|:-----------|:---------------|
@@ -89,7 +119,7 @@ Rules are grouped by category to help you understand their purpose. Each rule ha
 | [require-return-from-computed](./docs/rules/require-return-from-computed.md) | disallow missing return statements in computed properties | ✅ |  |  |
 | [use-brace-expansion](./docs/rules/use-brace-expansion.md) | enforce usage of brace expansion in computed property dependent keys | ✅ |  |  |
 
-### Controllers
+### <a name='Controllers'></a>Controllers
 
 | Name    | Description | ✅ | 🔧 | 💡 |
 |:--------|:------------|:---------------|:-----------|:---------------|
@@ -97,7 +127,7 @@ Rules are grouped by category to help you understand their purpose. Each rule ha
 | [avoid-using-needs-in-controllers](./docs/rules/avoid-using-needs-in-controllers.md) | disallow using `needs` in controllers | ✅ |  |  |
 | [no-controllers](./docs/rules/no-controllers.md) | disallow non-essential controllers |  |  |  |
 
-### Deprecations
+### <a name='Deprecations'></a>Deprecations
 
 | Name    | Description | ✅ | 🔧 | 💡 |
 |:--------|:------------|:---------------|:-----------|:---------------|
@@ -110,14 +140,14 @@ Rules are grouped by category to help you understand their purpose. Each rule ha
 | [no-old-shims](./docs/rules/no-old-shims.md) | disallow usage of old shims for modules | ✅ | 🔧 |  |
 | [no-string-prototype-extensions](./docs/rules/no-string-prototype-extensions.md) | disallow usage of `String` prototype extensions | ✅ |  |  |
 
-### Ember Data
+### <a name='EmberData'></a>Ember Data
 
 | Name    | Description | ✅ | 🔧 | 💡 |
 |:--------|:------------|:---------------|:-----------|:---------------|
 | [no-empty-attrs](./docs/rules/no-empty-attrs.md) | disallow usage of empty attributes in Ember Data models |  |  |  |
 | [use-ember-data-rfc-395-imports](./docs/rules/use-ember-data-rfc-395-imports.md) | enforce usage of `@ember-data/` package imports instead `ember-data` | ✅ | 🔧 |  |
 
-### Ember Object
+### <a name='EmberObject'></a>Ember Object
 
 | Name    | Description | ✅ | 🔧 | 💡 |
 |:--------|:------------|:---------------|:-----------|:---------------|
@@ -129,7 +159,7 @@ Rules are grouped by category to help you understand their purpose. Each rule ha
 | [require-super-in-lifecycle-hooks](./docs/rules/require-super-in-lifecycle-hooks.md) | require super to be called in lifecycle hooks | ✅ | 🔧 |  |
 | [use-ember-get-and-set](./docs/rules/use-ember-get-and-set.md) | enforce usage of `Ember.get` and `Ember.set` |  | 🔧 |  |
 
-### Ember Octane
+### <a name='EmberOctane'></a>Ember Octane
 
 | Name    | Description | ✅ | 🔧 | 💡 |
 |:--------|:------------|:---------------|:-----------|:---------------|
@@ -140,7 +170,7 @@ Rules are grouped by category to help you understand their purpose. Each rule ha
 | [no-ember-super-in-es-classes](./docs/rules/no-ember-super-in-es-classes.md) | disallow use of `this._super` in ES class methods | ✅ | 🔧 |  |
 | [no-empty-glimmer-component-classes](./docs/rules/no-empty-glimmer-component-classes.md) | disallow empty backing classes for Glimmer components | ✅ |  |  |
 
-### jQuery
+### <a name='jQuery'></a>jQuery
 
 | Name    | Description | ✅ | 🔧 | 💡 |
 |:--------|:------------|:---------------|:-----------|:---------------|
@@ -148,7 +178,7 @@ Rules are grouped by category to help you understand their purpose. Each rule ha
 | [no-global-jquery](./docs/rules/no-global-jquery.md) | disallow usage of global jQuery object | ✅ |  |  |
 | [no-jquery](./docs/rules/no-jquery.md) | disallow any usage of jQuery | ✅ |  |  |
 
-### Miscellaneous
+### <a name='Miscellaneous'></a>Miscellaneous
 
 | Name    | Description | ✅ | 🔧 | 💡 |
 |:--------|:------------|:---------------|:-----------|:---------------|
@@ -159,7 +189,7 @@ Rules are grouped by category to help you understand their purpose. Each rule ha
 | [no-restricted-property-modifications](./docs/rules/no-restricted-property-modifications.md) | disallow modifying the specified properties |  | 🔧 |  |
 | [require-fetch-import](./docs/rules/require-fetch-import.md) | enforce explicit import for `fetch()` |  |  |  |
 
-### Routes
+### <a name='Routes'></a>Routes
 
 | Name    | Description | ✅ | 🔧 | 💡 |
 |:--------|:------------|:---------------|:-----------|:---------------|
@@ -172,7 +202,7 @@ Rules are grouped by category to help you understand their purpose. Each rule ha
 | [route-path-style](./docs/rules/route-path-style.md) | enforce usage of kebab-case (instead of snake_case or camelCase) in route paths |  |  | 💡 |
 | [routes-segments-snake-case](./docs/rules/routes-segments-snake-case.md) | enforce usage of snake_cased dynamic segments in routes | ✅ |  |  |
 
-### Services
+### <a name='Services'></a>Services
 
 | Name    | Description | ✅ | 🔧 | 💡 |
 |:--------|:------------|:---------------|:-----------|:---------------|
@@ -181,7 +211,7 @@ Rules are grouped by category to help you understand their purpose. Each rule ha
 | [no-unnecessary-service-injection-argument](./docs/rules/no-unnecessary-service-injection-argument.md) | disallow unnecessary argument when injecting services |  | 🔧 |  |
 | [no-unused-services](./docs/rules/no-unused-services.md) | disallow unused service injections (see rule doc for limitations) |  |  | 💡 |
 
-### Stylistic Issues
+### <a name='StylisticIssues'></a>Stylistic Issues
 
 | Name    | Description | ✅ | 🔧 | 💡 |
 |:--------|:------------|:---------------|:-----------|:---------------|
@@ -190,7 +220,7 @@ Rules are grouped by category to help you understand their purpose. Each rule ha
 | [order-in-models](./docs/rules/order-in-models.md) | enforce proper order of properties in models |  | 🔧 |  |
 | [order-in-routes](./docs/rules/order-in-routes.md) | enforce proper order of properties in routes |  | 🔧 |  |
 
-### Testing
+### <a name='Testing'></a>Testing
 
 | Name    | Description | ✅ | 🔧 | 💡 |
 |:--------|:------------|:---------------|:-----------|:---------------|
@@ -215,11 +245,11 @@ Rules are grouped by category to help you understand their purpose. Each rule ha
 
 For the simplified list of rules, [go here](./lib/index.js).
 
-## 🍻 Contribution Guide
+## <a name='ContributionGuide'></a>🍻 Contribution Guide
 
 If you have any suggestions, ideas, or problems, feel free to [create an issue](https://github.com/ember-cli/eslint-plugin-ember/issues/new), but first please make sure your question does not repeat [previous ones](https://github.com/ember-cli/eslint-plugin-ember/issues).
 
-### Creating a New Rule
+### <a name='CreatingaNewRule'></a>Creating a New Rule
 
 - [Create an issue](https://github.com/ember-cli/eslint-plugin-ember/issues/new) with a description of the proposed rule
 - Create files for the [new rule](https://eslint.org/docs/developer-guide/working-with-rules):
@@ -234,6 +264,6 @@ If you have any suggestions, ideas, or problems, feel free to [create an issue](
 
 Note that new rules should not immediately be added to the [recommended](./lib/recommended-rules.js) configuration, as we only consider such breaking changes during major version updates.
 
-## 🔓 License
+## <a name='License'></a>🔓 License
 
 See the [LICENSE](LICENSE.md) file for license rights and limitations (MIT).
