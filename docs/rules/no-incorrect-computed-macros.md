@@ -18,7 +18,7 @@ import { and, or } from '@ember/object/computed';
 export default Component.extend({
   macroPropertyAnd: and('someProperty'), // Not enough arguments.
 
-  macroPropertyOr: or('someProperty') // Not enough arguments.
+  macroPropertyOr: or('someProperty'), // Not enough arguments.
 });
 ```
 
@@ -32,7 +32,7 @@ export default Component.extend({
 
   macroPropertyAnd: and('someProperty1', 'someProperty2'),
 
-  macroPropertyOr: or('someProperty1', 'someProperty2')
+  macroPropertyOr: or('someProperty1', 'someProperty2'),
 });
 ```
 

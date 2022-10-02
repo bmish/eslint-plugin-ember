@@ -18,7 +18,7 @@ import Component from '@ember/component';
 export default Component.extend({
   init() {
     this.set('items', []);
-  }
+  },
 });
 ```
 
@@ -28,7 +28,7 @@ import Component from '@ember/component';
 export default Component.extend({
   didInsertElement() {
     // ...
-  }
+  },
 });
 ```
 
@@ -51,7 +51,7 @@ export default Component.extend({
   init(...args) {
     this._super(...args);
     this.set('items', []);
-  }
+  },
 });
 ```
 
@@ -62,7 +62,7 @@ export default Component.extend({
   didInsertElement(...args) {
     this._super(...args);
     // ...
-  }
+  },
 });
 ```
 

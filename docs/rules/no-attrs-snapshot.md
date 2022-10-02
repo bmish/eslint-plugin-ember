@@ -31,7 +31,7 @@ export default Component({
     } else {
       this.set('updated', false);
     }
-  }
+  },
 });
 ```
 
@@ -53,7 +53,7 @@ export default Component({
     } else {
       this.set('updated', false);
     }
-  }
+  },
 });
 ```
 

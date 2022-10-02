@@ -23,7 +23,7 @@ export default Component.extend({
     this.users = [
       { name: 'Foo', age: 15 },
       { name: 'Bar', age: 16 },
-      { name: 'Baz', age: 15 }
+      { name: 'Baz', age: 15 },
     ];
     this._super(...args);
   },
@@ -38,7 +38,7 @@ export default Component.extend({
     const fifteen = this.users.filterBy('items', 'age', 15);
     this.set('fifteenAmountBad', fifteen.length); // SIDE EFFECT!
     return fifteen;
-  })
+  }),
 });
 ```
 

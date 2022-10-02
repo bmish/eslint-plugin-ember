@@ -36,7 +36,7 @@ export default Component.extend({
     scheduleOnce('afterRender', function () {
       /* this will run twice */
     });
-  }
+  },
 });
 ```
 
@@ -55,7 +55,7 @@ export default Component.extend({
   },
   deferredWork() {
     /* this will only run once */
-  }
+  },
 });
 ```
 

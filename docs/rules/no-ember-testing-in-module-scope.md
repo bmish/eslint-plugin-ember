@@ -22,7 +22,7 @@ export default Component.extend({
   init(...args) {
     this._super(...args);
     this.isTesting = Ember.testing;
-  }
+  },
 });
 ```
 
@@ -31,7 +31,7 @@ import Ember from 'ember';
 import Component from '@ember/component';
 
 export default Component.extend({
-  isTesting: Ember.testing
+  isTesting: Ember.testing,
 });
 ```
 
@@ -60,7 +60,7 @@ export default Component.extend({
     } else {
       doSomethingElse();
     }
-  }
+  },
 });
 ```
 
@@ -71,6 +71,6 @@ import Service from '@ember/service';
 export default Service.extend({
   foo() {
     _bar(Ember.testing ? 0 : 400);
-  }
+  },
 });
 ```

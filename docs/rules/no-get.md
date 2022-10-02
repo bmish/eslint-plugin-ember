@@ -72,7 +72,7 @@ import ObjectProxy from '@ember/object/proxy';
 export default ObjectProxy.extend({
   someFunction() {
     const foo = this.get('propertyInsideProxyObject'); // Allowed because inside proxy object.
-  }
+  },
 });
 ```
 
@@ -83,7 +83,7 @@ export default EmberObject.extend({
   unknownProperty(key) {},
   someFunction() {
     const foo = this.get('property'); // Allowed because inside object implementing `unknownProperty()`.
-  }
+  },
 });
 ```
 

@@ -11,26 +11,16 @@ const rules = {
   'ember/order-in-models': [
     2,
     {
-      order: [
-        'spread',
-        'attribute',
-        'relationship',
-        'single-line-function',
-        'multi-line-function'
-      ]
-    }
-  ]
+      order: ['spread', 'attribute', 'relationship', 'single-line-function', 'multi-line-function'],
+    },
+  ],
 };
 ```
 
 If you want some of properties to be treated equally in order you can group them into arrays, like so:
 
 ```js
-order: [
-  'attribute',
-  'relationship',
-  ['single-line-function', 'multi-line-function']
-];
+order: ['attribute', 'relationship', ['single-line-function', 'multi-line-function']];
 ```
 
 ### Custom Properties
@@ -66,7 +56,7 @@ export default Model.extend({
   mood: computed('health', 'hunger', function () {
     const result = this.health * this.hunger;
     return result;
-  })
+  }),
 });
 ```
 
@@ -82,12 +72,12 @@ export default Model.extend({
 
   behaviors: hasMany('behaviour'),
 
-  shape: attr('string')
+  shape: attr('string'),
 });
 ```
 
 ## Help Wanted
 
-| Issue | Link |
-| :-- | :-- |
+| Issue                                      | Link                                                                |
+| :----------------------------------------- | :------------------------------------------------------------------ |
 | ❌ Missing native JavaScript class support | [#560](https://github.com/ember-cli/eslint-plugin-ember/issues/560) |

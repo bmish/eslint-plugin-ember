@@ -11,8 +11,8 @@ export default Controller.extend({
   actions: {
     detonate() {
       alert('Kabooom');
-    }
-  }
+    },
+  },
 });
 ```
 
@@ -28,8 +28,8 @@ export default Component.extend({
   actions: {
     pushLever() {
       this.sendAction('detonate');
-    }
-  }
+    },
+  },
 });
 ```
 
@@ -45,8 +45,8 @@ export default Component.extend({
   actions: {
     pushLever() {
       this.boom();
-    }
-  }
+    },
+  },
 });
 ```
 

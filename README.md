@@ -33,20 +33,20 @@ module.exports = {
   plugins: ['ember'],
   extends: [
     'eslint:recommended',
-    'plugin:ember/recommended' // or other configuration
+    'plugin:ember/recommended', // or other configuration
   ],
   rules: {
     // override / enable optional rules
-    'ember/no-replace-test-comments': 'error'
-  }
+    'ember/no-replace-test-comments': 'error',
+  },
 };
 ```
 
 ## 🧰 Configurations
 
-|    | Name | Description |
-|:---|:-----|:------------|
-| ✅ | [recommended](./lib/recommended-rules.js) | enables the `recommended` rules |
+|     | Name                                      | Description                     |
+| :-- | :---------------------------------------- | :------------------------------ |
+| ✅  | [recommended](./lib/recommended-rules.js) | enables the `recommended` rules |
 
 ## 🍟 Rules
 

@@ -26,7 +26,7 @@ export default Component.extend({});
 import Component from '@ember/component';
 
 export default Component.extend({
-  tagName: 'span'
+  tagName: 'span',
 });
 ```
 
@@ -62,7 +62,7 @@ Examples of **correct** code for this rule:
 import Component from '@ember/component';
 
 export default Component.extend({
-  tagName: ''
+  tagName: '',
 });
 ```
 

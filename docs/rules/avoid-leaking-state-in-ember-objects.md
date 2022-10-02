@@ -15,8 +15,8 @@ export default Foo.extend({
   actions: {
     addItem(item) {
       this.items.pushObject(item);
-    }
-  }
+    },
+  },
 });
 ```
 
@@ -24,7 +24,7 @@ export default Foo.extend({
 import Mixin from '@ember/object/mixin';
 
 export default Mixin.create({
-  items: []
+  items: [],
 });
 ```
 
@@ -41,8 +41,8 @@ export default Foo.extend({
   actions: {
     addItem(item) {
       this.items.pushObject(item);
-    }
-  }
+    },
+  },
 });
 ```
 
@@ -69,9 +69,9 @@ module.exports = {
   rules: {
     'ember/avoid-leaking-state-in-ember-objects': [
       'error',
-      ['array', 'of', 'ignored', 'properties']
-    ]
-  }
+      ['array', 'of', 'ignored', 'properties'],
+    ],
+  },
 };
 ```
 

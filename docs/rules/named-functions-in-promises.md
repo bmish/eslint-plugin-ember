@@ -38,7 +38,7 @@ export default Component.extend({
         .then(() => this._reloadUser())
         .then(() => this._notifyAboutSuccess())
         .catch(() => this._notifyAboutFailure());
-    }
+    },
   },
   _reloadUser(user) {
     return user.reload();
@@ -48,7 +48,7 @@ export default Component.extend({
   },
   _notifyAboutFailure() {
     // ...
-  }
+  },
 });
 ```
 

@@ -28,7 +28,7 @@ export default Component.extend({
       this.set('firstName', firstName);
       this.set('lastName', lastName);
       // Missing return here.
-    }
+    },
   }),
 
   salutation: computed('firstName', function () {
@@ -36,7 +36,7 @@ export default Component.extend({
       return `Dr. ${this.firstName}`;
     }
     // Missing return here.
-  })
+  }),
 });
 ```
 
@@ -59,7 +59,7 @@ export default Component.extend({
       this.set('firstName', firstName);
       this.set('lastName', lastName);
       return value;
-    }
+    },
   }),
 
   salutation: computed('firstName', function () {
@@ -67,7 +67,7 @@ export default Component.extend({
       return `Dr. ${this.firstName}`;
     }
     return '';
-  })
+  }),
 });
 ```
 

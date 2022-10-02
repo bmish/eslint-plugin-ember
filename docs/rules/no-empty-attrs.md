@@ -16,7 +16,7 @@ const { Model, attr } = DS;
 export default Model.extend({
   name: attr(),
   points: attr(),
-  dob: attr()
+  dob: attr(),
 });
 ```
 
@@ -28,7 +28,7 @@ const { Model, attr } = DS;
 export default Model.extend({
   name: attr('string'),
   points: attr('number'),
-  dob: attr('date')
+  dob: attr('date'),
 });
 ```
 
@@ -36,6 +36,6 @@ In case you need a custom behavior, it's good to write your own [transform](http
 
 ## Help Wanted
 
-| Issue | Link |
-| :-- | :-- |
+| Issue                                      | Link                                                                |
+| :----------------------------------------- | :------------------------------------------------------------------ |
 | ❌ Missing native JavaScript class support | [#560](https://github.com/ember-cli/eslint-plugin-ember/issues/560) |

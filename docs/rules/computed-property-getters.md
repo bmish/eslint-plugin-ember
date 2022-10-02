@@ -11,9 +11,9 @@ This rule takes a single string option.
 
 String option:
 
-- `"always-with-setter"` (default) getters are *required* when computed property has a setter
-- `"always"` getters are *required* in computed properties
-- `"never"`  getters are *never allowed* in computed properties
+- `"always-with-setter"` (default) getters are _required_ when computed property has a setter
+- `"always"` getters are _required_ in computed properties
+- `"never"` getters are _never allowed_ in computed properties
 
 ## Examples
 
@@ -27,15 +27,15 @@ EmberObject.extend({
   fullName: computed('firstName', 'lastName', {
     get() {
       // ...
-    }
-  })
+    },
+  }),
 });
 
 // GOOD
 EmberObject.extend({
   fullName: computed('firstName', 'lastName', function () {
     // ...
-  })
+  }),
 });
 
 // GOOD
@@ -46,8 +46,8 @@ EmberObject.extend({
     },
     get() {
       // ...
-    }
-  })
+    },
+  }),
 });
 ```
 
@@ -61,15 +61,15 @@ EmberObject.extend({
   fullName: computed('firstName', 'lastName', {
     get() {
       // ...
-    }
-  })
+    },
+  }),
 });
 
 // BAD
 EmberObject.extend({
   fullName: computed('firstName', 'lastName', function () {
     // ...
-  })
+  }),
 });
 ```
 
@@ -82,7 +82,7 @@ import EmberObject, { computed } from '@ember/object';
 EmberObject.extend({
   fullName: computed('firstName', 'lastName', function () {
     // ...
-  })
+  }),
 });
 
 // BAD
@@ -90,8 +90,8 @@ EmberObject.extend({
   fullName: computed('firstName', 'lastName', {
     get() {
       // ...
-    }
-  })
+    },
+  }),
 });
 
 // BAD
@@ -102,13 +102,13 @@ EmberObject.extend({
     },
     set() {
       // ...
-    }
-  })
+    },
+  }),
 });
 ```
 
 ## Help Wanted
 
-| Issue | Link |
-| :-- | :-- |
+| Issue                                      | Link                                                                |
+| :----------------------------------------- | :------------------------------------------------------------------ |
 | ❌ Missing native JavaScript class support | [#560](https://github.com/ember-cli/eslint-plugin-ember/issues/560) |

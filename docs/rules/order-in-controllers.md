@@ -22,10 +22,10 @@ const rules = {
         'multi-line-function',
         'observer',
         'actions',
-        ['method', 'empty-method']
-      ]
-    }
-  ]
+        ['method', 'empty-method'],
+      ],
+    },
+  ],
 };
 ```
 
@@ -36,7 +36,7 @@ order: [
   ['controller', 'service', 'query-params'],
   'inherited-property',
   'property',
-  ['single-line-function', 'multi-line-function']
+  ['single-line-function', 'multi-line-function'],
 ];
 ```
 
@@ -69,7 +69,7 @@ You should write code grouped and ordered in this way:
 const {
   Controller,
   computed,
-  inject: { controller, service }
+  inject: { controller, service },
 } = Ember;
 
 export default Controller.extend({
@@ -105,18 +105,18 @@ export default Controller.extend({
   actions: {
     sneakyAction() {
       return this._secretMethod();
-    }
+    },
   },
 
   // 10. Custom / private methods
   _secretMethod() {
     // custom secret method logic
-  }
+  },
 });
 ```
 
 ## Help Wanted
 
-| Issue | Link |
-| :-- | :-- |
+| Issue                                      | Link                                                                |
+| :----------------------------------------- | :------------------------------------------------------------------ |
 | ❌ Missing native JavaScript class support | [#560](https://github.com/ember-cli/eslint-plugin-ember/issues/560) |

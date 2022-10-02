@@ -26,7 +26,7 @@ export default Component.extend({
   }.observes('xyz'),
   ghi: function () {
     /* custom logic */
-  }.on('didInsertElement')
+  }.on('didInsertElement'),
 });
 ```
 
@@ -42,7 +42,7 @@ export default Component.extend({
   }),
   didInsertElement() {
     /* custom logic */
-  }
+  },
 });
 ```
 

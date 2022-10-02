@@ -20,8 +20,8 @@ import Component from '@ember/component';
 
 export default Component.extend({
   actions: {
-    foo() {}
-  }
+    foo() {},
+  },
 });
 ```
 
@@ -31,7 +31,7 @@ import Component from '@ember/component';
 
 export class MyComponent extends Component {
   actions = {
-    foo() {}
+    foo() {},
   };
 }
 ```
@@ -44,7 +44,7 @@ import Component from '@ember/component';
 import { action } from '@ember/object';
 
 export default Component.extend({
-  foo: action(function () {})
+  foo: action(function () {}),
 });
 ```
 

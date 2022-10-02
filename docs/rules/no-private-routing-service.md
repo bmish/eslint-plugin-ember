@@ -19,7 +19,7 @@ import Component from '@ember/component';
 import { inject as service } from '@ember/service';
 
 export default Component.extend({
-  routing: service('-routing')
+  routing: service('-routing'),
 });
 ```
 
@@ -66,7 +66,7 @@ import Component from '@ember/component';
 import { inject as service } from '@ember/service';
 
 export default Component.extend({
-  router: service('router')
+  router: service('router'),
 });
 ```
 

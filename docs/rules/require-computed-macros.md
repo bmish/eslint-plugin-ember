@@ -68,7 +68,7 @@ export default Component.extend({
 
   propMapBy: computed('children.@each.age', function () {
     return this.children.mapBy('age');
-  })
+  }),
 });
 ```
 
@@ -87,7 +87,7 @@ import {
   not,
   equal,
   filterBy,
-  mapBy
+  mapBy,
 } from '@ember/object/computed';
 
 export default Component.extend({
@@ -111,7 +111,7 @@ export default Component.extend({
 
   propFilterBy: filterBy('chores', 'done', true),
 
-  propMapBy: mapBy('children', 'age')
+  propMapBy: mapBy('children', 'age'),
 });
 ```
 
