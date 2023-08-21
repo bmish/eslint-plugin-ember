@@ -19,6 +19,7 @@ module.exports = {
     'ember-cli/ember-cli',
     'ember-cli/ember-cli-htmlbars',
     'ember-decorators/ember-decorators',
+    'ember-learn/super-rentals-tutorial',
     'emberjs/data',
     'emberjs/ember-qunit',
     'emberjs/ember.js',
